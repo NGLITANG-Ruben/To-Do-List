@@ -1,0 +1,114 @@
+body {
+  background: url(ToDoList.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 60px;
+}
+
+.division {
+   
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+
+  padding: 20px;
+  width: 450px;
+}
+
+.division1 {
+  text-align: center;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: underline;
+  padding-bottom: 20px;
+}
+
+.division2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+   
+  background-color: white;
+  border-radius: 33px;
+  
+}
+
+.division2 input {
+  padding: 15px;
+  border: none;
+  /*Permet de supprimer le border lorsqu'on ecrit un texte dans le input*/
+  outline: none;
+  background-color: transparent;
+  padding-right: 30%; 
+  font-size: 17px; 
+}
+
+.division2 button {
+  color: white;
+  background-color: blue;
+  border: none;
+  border-radius: 33px;
+  padding: 1px 30px;
+  margin-right: -2px;
+  font-size: 17px;
+}
+
+.division3 {
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  padding: 12px 8px 12px 50px;
+}
+
+ul li::before {
+  position: absolute;
+  content: '';
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-image: url(just0.jpg);
+  background-position: center;
+  background-size: cover;
+  top: 12px;
+  left: 8px;
+}
+
+li.coche {
+  /* Permet de barrer un texte avec une ligne */
+  text-decoration: line-through;
+   
+}
+
+li.coche::before {
+  background-image: url(just.jpg);
+}
+
+li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color:  blue;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+li span:hover {
+  background-color: rgb(211, 202, 202);
+}
